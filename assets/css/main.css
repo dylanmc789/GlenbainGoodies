@@ -33,11 +33,11 @@ body {
 }
 /* Navigation Bar in Header */
 .nav-bar {
-  margin-top: 1.5rem;
+  margin-top: 2rem;              /* More spacing below logo */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;               /* Allows multiple rows */
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem 3rem;                /* Row gap 2rem, column gap 3rem */
 }
 
 .nav-bar a {
@@ -47,6 +47,7 @@ body {
   padding: 0.5rem 0.75rem;
   transition: background 0.2s ease, color 0.2s ease;
   border-radius: 4px;
+  white-space: nowrap;           /* Prevent breaking individual links */
 }
 
 .nav-bar a:hover {
@@ -63,6 +64,7 @@ body {
 .nav-bar .nav-primary:hover {
   background-color: var(--card-hover);
 }
+
 
 
 /* Category Grid */
