@@ -31,6 +31,39 @@ body {
   max-width: 420px;
   width: 100%;
 }
+/* Navigation Bar in Header */
+.nav-bar {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 4px;
+}
+
+.nav-bar a:hover {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+
+.nav-bar .nav-primary {
+  font-weight: 600;
+  background-color: var(--card-bg);
+  padding: 0.5rem 1rem;
+}
+
+.nav-bar .nav-primary:hover {
+  background-color: var(--card-hover);
+}
+
 
 /* Category Grid */
 .category-grid {
