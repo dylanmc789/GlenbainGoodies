@@ -1,2 +1,6 @@
 title: Glenbain Goodies
-markdown: kramdown
+url: https://www.glenbaingoodies.ca
+
+collections:
+  categories:
+    output: true
