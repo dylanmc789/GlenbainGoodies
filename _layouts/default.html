@@ -5,7 +5,7 @@
   <title>{{ page.title }} – Glenbain Goodies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="/assets/images/gG.png">
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/gG.png">
 
   <!-- Google Tag Manager -->
   <script>
@@ -19,7 +19,8 @@
   })(window,document,'script','dataLayer','GTM-T4FSHBD');
   </script>
 
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 
 <body>
@@ -31,8 +32,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 <header class="header">
   <div class="header-inner">
-    <a href="/">
-      <img src="/assets/images/Glenbain+Goodies.webp" class="logo" alt="Glenbain Goodies">
+    <a href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/assets/images/Glenbain+Goodies.webp" class="logo" alt="Glenbain Goodies">
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -40,11 +41,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </button>
 
     <nav class="nav-bar">
-      <a href="/categories/appetizers/">Appetizers</a>
-      <a href="/categories/desserts/">Desserts</a>
-      <a href="/categories/cookies/">Cookies</a>
-      <a href="/categories/mains/">Mains</a>
-      <a href="/add-recipe.html" class="nav-primary">Add Recipe</a>
+      <a href="{{ site.baseurl }}/appetizers/">Appetizers</a>
+      <a href="{{ site.baseurl }}/desserts/">Desserts</a>
+      <a href="{{ site.baseurl }}/cookies/">Cookies</a>
+      <a href="{{ site.baseurl }}/mains/">Mains</a>
+      <a href="{{ site.baseurl }}/soups-salads-sides/">Soups, Salads & Sides</a>
+      <a href="{{ site.baseurl }}/add-recipe.html" class="nav-primary">Add Recipe</a>
     </nav>
   </div>
 </header>
