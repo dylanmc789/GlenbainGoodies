@@ -3,13 +3,14 @@ layout: default
 ---
 
 <section class="category-page">
-  <h1 class="category-title">{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 
-  <div class="recipe-grid">
-    {% for p in site.pages %}
-      {% if p.dir == page.dir and p.name != "index.md" %}
-        <a href="{{ site.baseurl }}{{ p.url }}" class="category-card">
-          <h2>{{ p.title }}</h2>
+  <div class="category-grid">
+    {% assign cat_slug = page.slug %}
+    {% for recipe in site.pages %}
+      {% if recipe.path contains cat_slug and recipe.layout == "recipe" %}
+        <a href="{{ site.baseurl }}/{{ recipe.path | remove: ".md" | remove: "_recipes/" }}" class="category-card">
+          {{ recipe.title }}
         </a>
       {% endif %}
     {% endfor %}
