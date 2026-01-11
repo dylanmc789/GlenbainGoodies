@@ -4,8 +4,6 @@ title: "Honey Mustard Sauce"
 author: ""
 ---
 
-[![Print Friendly and PDF](//cdn.printfriendly.com/buttons/printfriendly-pdf-email-button-md.png)](https://www.printfriendly.com "Printer Friendly and PDF")
-
 ### Ingredients
 
 * 1 cup white sugar

@@ -1,10 +1,8 @@
 ---
 layout: recipe
-title: Cheese Ball
-category: appetizers
+title: "Cheese Ball"
+author: ""
 ---
-
-By:
 
 ### Ingredients
 
