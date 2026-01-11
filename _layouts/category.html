@@ -6,14 +6,9 @@ layout: default
   <h1 class="category-title">{{ page.title }}</h1>
 
   <div class="recipe-grid">
-    {% for page in site.pages %}
-      {% if page.dir == page.url %}
-      {% endif %}
-    {% endfor %}
-
     {% for p in site.pages %}
       {% if p.dir == page.dir and p.name != "index.md" %}
-        <a href="{{ p.url }}" class="category-card">
+        <a href="{{ site.baseurl }}{{ p.url }}" class="category-card">
           <h2>{{ p.title }}</h2>
         </a>
       {% endif %}
