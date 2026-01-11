@@ -89,11 +89,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav-bar');
+  const links = nav.querySelectorAll('a');
 
   toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
     nav.classList.toggle('active');
   });
+
+  // Close menu when a link is clicked
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
 </script>
+
 
 </body>
 </html>
