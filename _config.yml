@@ -1,5 +1,7 @@
 title: Glenbain Goodies
-url: https://www.glenbaingoodies.ca
+url: https://dylanmc789.github.io
+baseurl: /GlenbainGoodies
+
 
 collections:
   categories:
