@@ -77,10 +77,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
-.category-page h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+
 
 /* Category Cards */
 .category-card {
@@ -124,7 +121,10 @@ body {
   max-width: 700px;
   margin: auto;
 }
-
+.category-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .site-section h2,
 .site-section h3 {
   color: var(--text-dark);
