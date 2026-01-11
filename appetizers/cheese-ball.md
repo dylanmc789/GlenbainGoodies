@@ -4,8 +4,6 @@ title: Cheese Ball
 category: appetizers
 ---
 
-# Cheese Ball
-
 By:
 
 ### Ingredients
