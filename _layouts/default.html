@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} – Glenbain Goodies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: "Glenbain Goodies" }}</title>
 
-  <link rel="icon" href="{{ site.baseurl }}/assets/images/gG.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/gG.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/gG.png">
 
   <!-- Google Tag Manager -->
   <script>
@@ -22,7 +23,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
-
 <body>
 
 <noscript>
@@ -30,22 +30,29 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
+<!-- Header with Navigation -->
 <header class="header">
   <div class="header-inner">
     <a href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/assets/images/Glenbain+Goodies.webp" class="logo" alt="Glenbain Goodies">
+      <img src="{{ site.baseurl }}/assets/images/Glenbain+Goodies.webp" alt="Glenbain Goodies" class="logo">
     </a>
 
+    <!-- Hamburger Button -->
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
 
+    <!-- Navigation -->
     <nav class="nav-bar">
-      <a href="{{ site.baseurl }}/appetizers/">Appetizers</a>
-      <a href="{{ site.baseurl }}/desserts/">Desserts</a>
-      <a href="{{ site.baseurl }}/cookies/">Cookies</a>
-      <a href="{{ site.baseurl }}/mains/">Mains</a>
-      <a href="{{ site.baseurl }}/soups-salads-sides/">Soups, Salads & Sides</a>
+      <a href="{{ site.baseurl }}/appetizers">Appetizers</a>
+      <a href="{{ site.baseurl }}/beverages">Beverages</a>
+      <a href="{{ site.baseurl }}/brunch-breads">Brunch &amp; Breads</a>
+      <a href="{{ site.baseurl }}/canning">Canning</a>
+      <a href="{{ site.baseurl }}/casseroles">Casseroles</a>
+      <a href="{{ site.baseurl }}/cookies">Cookies</a>
+      <a href="{{ site.baseurl }}/desserts">Desserts</a>
+      <a href="{{ site.baseurl }}/mains">Mains</a>
+      <a href="{{ site.baseurl }}/soups-salads-sides">Soups, Salads &amp; Sides</a>
       <a href="{{ site.baseurl }}/add-recipe.html" class="nav-primary">Add Recipe</a>
     </nav>
   </div>
@@ -55,17 +62,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   {{ content }}
 </main>
 
+<!-- Footer -->
 <footer class="site-footer">
-  <p>© Glenbain Goodies</p>
+  <p>© Glenbain Goodies. All Rights Reserved.</p>
 </footer>
 
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav-bar');
+const links = nav.querySelectorAll('a');
 
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('active');
   nav.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    nav.classList.remove('active');
+  });
 });
 </script>
 
