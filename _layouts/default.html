@@ -99,6 +99,41 @@ links.forEach(link => {
   });
 });
 </script>
+<script>
+const searchInput = document.querySelector(".search-input");
+const resultsDiv = document.getElementById("search-results");
+let searchIndex = [];
+
+// Fetch search.json
+fetch("/search.json")
+  .then(res => res.json())
+  .then(data => { searchIndex = data; });
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase().trim();
+  resultsDiv.innerHTML = "";
+
+  if (!query) return;
+
+  const matches = searchIndex.filter(item =>
+    item.title.toLowerCase().includes(query) ||
+    item.content.toLowerCase().includes(query)
+  );
+
+  if (matches.length === 0) {
+    resultsDiv.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+
+  const html = matches.map(item =>
+    `<a href="${item.url}" class="search-result">
+       <strong>${item.title}</strong> <em>(${item.category})</em>
+     </a>`
+  ).join("<br>");
+
+  resultsDiv.innerHTML = html;
+});
+</script>
 
 </body>
 </html>
