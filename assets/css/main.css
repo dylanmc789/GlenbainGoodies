@@ -240,6 +240,21 @@ body {
   padding: 2rem 1rem;
   font-size: 0.9rem;
 }
+#search-results {
+  margin-top: 1rem;
+}
+
+#search-results a.search-result {
+  display: block;
+  padding: 0.5rem 0.25rem;
+  text-decoration: none;
+  color: #163236;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#search-results a.search-result:hover {
+  background-color: #eaf6f6;
+}
 
 @media (max-width: 768px) {
 
