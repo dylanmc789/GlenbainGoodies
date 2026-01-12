@@ -1,17 +1,3 @@
-{% comment %}
-Generates search.json file in site root
-{% endcomment %}
-[
-{% for recipe in site.recipes %}
-  {
-    "title": "{{ recipe.title | escape }}",
-    "url": "{{ recipe.url }}",
-    "category": "{{ recipe.category | escape }}",
-    "content": "{{ recipe.content | strip_html | strip_newlines | escape }}"
-  }{% if forloop.last == false %},{% endif %}
-{% endfor %}
-]
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
