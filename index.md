@@ -7,6 +7,8 @@ title: Glenbain Goodies
   <div class="content-wrapper">
     <h2>Search Recipes Here</h2>
     <input type="search" placeholder="Search..." class="search-input">
+<div id="search-results"></div>
+
     <p>Glenbain Goodies shows us some of the best home-cooked recipes from around Glenbain, Sask.</p>
 
     <img src="{{ site.baseurl }}/assets/images/Glen+bain.webp" alt="Glen bain" class="section-image">
