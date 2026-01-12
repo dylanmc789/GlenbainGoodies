@@ -86,40 +86,46 @@ links.forEach(link => {
 });
 </script>
 <script>
-const searchInput = document.querySelector(".search-input");
-const resultsDiv = document.getElementById("search-results");
-let searchIndex = [];
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector(".search-input");
+  const resultsDiv = document.getElementById("search-results");
 
-// Fetch search.json
-fetch("/search.json")
-  .then(res => res.json())
-  .then(data => { searchIndex = data; });
+  if (!searchInput || !resultsDiv) return;
 
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase().trim();
-  resultsDiv.innerHTML = "";
+  let searchIndex = [];
 
-  if (!query) return;
+  fetch("{{ site.baseurl }}/search.json")
+    .then(res => res.json())
+    .then(data => {
+      searchIndex = data;
+    })
+    .catch(err => console.error("Search index load failed:", err));
 
-  const matches = searchIndex.filter(item =>
-    item.title.toLowerCase().includes(query) ||
-    item.content.toLowerCase().includes(query)
-  );
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
 
-  if (matches.length === 0) {
-    resultsDiv.innerHTML = "<p>No results found.</p>";
-    return;
-  }
+    if (query.length < 2) return;
 
-  const html = matches.map(item =>
-    `<a href="${item.url}" class="search-result">
-       <strong>${item.title}</strong> <em>(${item.category})</em>
-     </a>`
-  ).join("<br>");
+    const matches = searchIndex.filter(item =>
+      item.title.toLowerCase().includes(query) ||
+      item.content.toLowerCase().includes(query)
+    );
 
-  resultsDiv.innerHTML = html;
+    if (matches.length === 0) {
+      resultsDiv.innerHTML = "<p>No results found.</p>";
+      return;
+    }
+
+    resultsDiv.innerHTML = matches.map(item => `
+      <a href="${item.url}" class="search-result">
+        <strong>${item.title}</strong>
+      </a>
+    `).join("");
+  });
 });
 </script>
+
 
 </body>
 </html>
