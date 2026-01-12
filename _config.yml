@@ -1,6 +1,6 @@
 title: Glenbain Goodies
-url: https://dylanmc789.github.io
-baseurl: /GlenbainGoodies
+url: https://www.glenbaingoodies.ca
+baseurl: ""   # MUST be empty for custom domain
 
 
 collections:
