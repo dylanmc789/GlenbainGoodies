@@ -18,7 +18,7 @@ title: Glenbain Goodies
 
     <p>Glenbain Goodies shows us some of the best home-cooked recipes from around Glenbain, Sask.</p>
 
-    <img src="{{ site.baseurl }}/assets/images/Glen+bain.webp" alt="Glen bain" class="section-image">
+    <img src="{{ site.url }}/assets/images/Glen+bain.webp" alt="Glen bain" class="section-image">
 
     <h3>Recipe Count: 141</h3>
 
@@ -28,6 +28,6 @@ title: Glenbain Goodies
       <img src="{{ site.baseurl }}/assets/images/cooking.webp" alt="Cooking" class="section-image">
     </a>
 
-    <p>If you have a recipe you would like to add to the site, <a href="{{ site.baseurl }}/add-recipe">click here</a>.</p>
+    <p>If you have a recipe you would like to add to the site, <a href="{{ site.url }}/add-recipe">click here</a>.</p>
   </div>
 </section>
