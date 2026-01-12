@@ -244,17 +244,18 @@ body {
   margin-top: 1rem;
 }
 
-#search-results a.search-result {
+.search-result {
   display: block;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem;
   text-decoration: none;
   color: #163236;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #cfe7e7;
 }
 
-#search-results a.search-result:hover {
-  background-color: #eaf6f6;
+.search-result:hover {
+  background: #eaf6f6;
 }
+
 
 @media (max-width: 768px) {
 
