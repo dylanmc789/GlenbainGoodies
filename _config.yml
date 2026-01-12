@@ -6,3 +6,6 @@ baseurl: /GlenbainGoodies
 collections:
   categories:
     output: true
+  recipes:
+    output: true
+    permalink: /:collection/:name/
